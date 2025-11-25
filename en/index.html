@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic English Course Bekasi — English Version</title>
+
+  <style>
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: #064f44;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+    .nav-brand {
+      font-size: 1.4rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #064f44;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+      }
+      .nav-links a {
+        padding: 10px 0;
+        font-size: 1rem;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      background: url("IMG-20251120-WA0096.jpg") no-repeat center center/cover;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px black;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #f5f5f5;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* FLOATING BUTTON WA */
+    .float-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      padding: 15px 20px;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">Dynamic English Course Bekasi</div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+    <div class="nav-links">
+      <a href="/index.html#home">Home</a>
+      <a href="/index.html#program">Programs</a>
+      <a href="/index.html#pricing">Pricing</a>
+      <a href="/index.html#gallery">Gallery</a>
+      <a href="/index.html#contact">Contact</a>
+    </div>
+
+    <div class="lang-switch">
+      <a href="/index.html" style="color:white;">ID</a> |
+      <a href="/en/index.html" style="color:white;">EN</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    Discover a new and exciting way to master English — fun, effective, and designed for all ages.
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="program" class="section">
+    <h2>Our Programs</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Kids Program</h3>
+        <p>An engaging learning experience through games, storytelling, and interactive activities.</p>
+      </div>
+
+      <div class="card">
+        <h3>Teens Program</h3>
+        <p>Build confidence with speaking, school support materials, and practical English skills.</p>
+      </div>
+
+      <div class="card">
+        <h3>Adults Program</h3>
+        <p>Practical English for career development, workplace communication, and everyday interaction.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <h2>Pricing</h2>
+    <p>Contact us to find the best program and pricing option for your needs.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <p>Take a look at our learning activities, facilities, and memorable student moments.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Jl. H. Jaiman No.66, Jatisari, Jatiasih, Bekasi</p>
+    <p><strong>Operating Hours:</strong> Monday–Saturday • 08:00 – 20:00</p>
+  </section>
+
+  <!-- WHATSAPP BUTTON -->
+  <a class="float-wa" href="https://wa.me/6281212345678" target="_blank">
+    Chat with Us
+  </a>
+
+</body>
+</html>
