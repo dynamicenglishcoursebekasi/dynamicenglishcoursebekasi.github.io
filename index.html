@@ -251,96 +251,61 @@
     #prev { left: 10px; }
     #next { right: 10px; }
 
-    /* TESTIMONIALS */
-.testimonial-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+<style>
+#testimonials {
+  padding:50px 20px;
+  background:#f1faf9;
 }
 
-.testimonial-title {
-  color: #064f44;
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.testimonial-slider-container {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  margin-top:30px;
 }
 
-.testimonial-subtitle {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 40px;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+.testimonial-slider {
+  display:flex;
+  gap:20px;
+  scroll-behavior:smooth;
+  padding-bottom:10px;
 }
 
 .testimonial-card {
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  width:300px;
+  min-height:250px;
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  flex-shrink:0;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.testimonial-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.testimonial-photo {
+  width:70px;
+  height:70px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:10px;
 }
 
-.testimonial-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.testi-btn {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#064f44;
+  color:white;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:20px;
 }
 
-.testimonial-avatar {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.testimonial-role {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #ffb400;
-}
-
-.rating i {
-  color: #ffb400;
-}
-
-.testimonial-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #444;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-}
+#t-prev { left:10px; }
+#t-next { right:10px; }
+    
     
     /* FLOATING BUTTONS */
     .float-btn {
@@ -793,146 +758,128 @@ slider.addEventListener('touchmove', (e)=>{
 });
 </script>
 
-<section id="testimonials" style="padding:50px 20px; background:#f1faf9;">
-  <h2 style="text-align:center;">What Our Students Say</h2>
+<section id="testimonials" class="testimonials">
+  <h2 class="section-title">What They Say</h2>
 
-  <div class="testimonial-slider-container" style="position:relative; overflow:hidden; max-width:100%; margin-top:30px;">
+  <div class="testi-slider">
     
-    <div class="testimonial-slider" style="display:flex; gap:20px; transition:0.4s;">
-
-<!-- TESTIMONI 1 -->
-<div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
-        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
-        <h3 style="margin:0;">Fatan</h3>
-        <p style="font-size:0.85rem; color:#555;">Student Junior High School / 14 Tahun</p>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>5.0</span>
+    <!-- Testi 1 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 4.8</div>
+      <p class="testi-text">Memberikan kosa kata yang real life dan dapat lebih dimengerti, suasananya lebih nyaman di Les daripada di kelas.</p>
+      <div class="testi-info">
+        <img src="IMG20251121194018.jpg" alt="Fatan">
+        <div>
+          <h4>Fatan</h4>
+          <span>Junior High Student — 14 Tahun</span>
         </div>
       </div>
-        <p style="font-size:0.9rem; margin-top:10px;">
-          “Memberikan kosa kata yang real life dan lebih mudah dimengerti. Suasananya juga lebih nyaman di Les daripada di kelas.”
-        </p>
-      </div>
-
     </div>
 
-    <!-- TESTIMONI 2 -->
-  <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
-        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
-        <h3 style="margin:0;">Dareen</h3>
-        <p style="font-size:0.85rem; color:#555;">Student SMPIT Darul Mazaa / 14 Tahun</p>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>5.0</span>
-        </div>
-      </div>
-        <p style="font-size:0.9rem; margin-top:10px;">
-          “Hello Miss Lila, I just wanna say thank you for being such an amazing teacher. You made learning English way more
+    <!-- Testi 2 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 5.0</div>
+      <p class="testi-text">Hello Miss Lila, I just wanna say thank you for being such an amazing teacher. You made learning English way more
         fun than I ever expected, especially with all the games and activities you brought into class. You always knew
         how to make everyone enjoy learning while still actually learning something real.
         <br><br>
         I'm going to miss your classes, the laughs, the energy, and just how chill and kind you always were. Thank you
-        for everything you've done for us. You really made a big impact, and I'll never forget it.”
-        </p>
+        for everything you've done for us. You really made a big impact, and I'll never forget it.</p>
+      <div class="testi-info">
+        <img src="dareen.jpg" alt="Dareen">
+        <div>
+          <h4>Dareen</h4>
+          <span>Student SMPIT</span>
+        </div>
       </div>
+    </div>
 
-    <!-- TESTIMONI 3 -->
-    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
-        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
-        <h3 style="margin:0;">Zahra</h3>
-        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 15 Tahun</p>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>4.9</span>
+    <!-- Testi 3 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 4.9</div>
+      <p class="testi-text">Alhamdulillah Zahra terbantu dengan kelas belajar bahasa Inggris online kemarin. Penjelasan dari Miss mengenai materi mudah di pahami membuat Zahra jadi mudah belajar bahasa Inggris nya. Terimakasih miss dan tim kampung inggris 😍</p>
+      <div class="testi-info">
+        <img src="zahra.jpg" alt="Zahra">
+        <div>
+          <h4>Zahra</h4>
+          <span>Siswa Online Program - 15 Tahun</span>
         </div>
       </div>
-        <p style="font-size:0.9rem; margin-top:10px;">
-          “Alhamdulillah Zahra terbantu dengan kelas belajar bahasa Inggris online kemarin. Penjelasan dari Miss mengenai materi mudah di pahami membuat Zahra jadi mudah belajar bahasa Inggris nya. Terimakasih miss dan tim kampung inggris 😍”
-        </p>
-      </div>
+    </div>
 
-    <!-- TESTIMONI 4 -->
-    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
-        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
-        <h3 style="margin:0;">Rizma</h3>
-        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 15 Tahun</p>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>4.9</span>
+    <!-- Testi 4 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 4.9</div>
+      <p class="testi-text">Alhamdulillah,masyaallah banget seru, terus penjelasan nya pun cepat di mengerti, dan Miss Syifa and Miss Lila  juga very kind, dan pelajaran nya juga sangat baik, Rizma sangat senang sekali pernah belajar bersama orang hebat seperti Miss Syifa dan Miss Lila, kita akan selalu merindukan Miss Syifa dan Miss Lila, Rizma juga sangat terbantu dengan program online class kita kemaren🫶 Terimakasih banyak kepada Miss dan semuanya🥰🤗</p>
+      <div class="testi-info">
+        <img src="rizma.jpg" alt="Rizma">
+        <div>
+          <h4>Rizma</h4>
+          <span>Siswa Online Program - 17 Tahun</span>
         </div>
       </div>
-        <p style="font-size:0.9rem; margin-top:10px;">
-          “Alhamdulillah,masyaallah banget seru, terus penjelasan nya pun cepat di mengerti, dan Miss Syifa and Miss Lila  juga very kind, dan pelajaran nya juga sangat baik, Rizma sangat senang sekali pernah belajar bersama orang hebat seperti Miss Syifa dan Miss Lila, kita akan selalu merindukan Miss Syifa dan Miss Lila, Rizma juga sangat terbantu dengan program online class kita kemaren🫶 Terimakasih banyak kepada Miss dan semuanya🥰🤗”
-        </p>
-      </div>
+    </div>
     
-    <!-- TESTIMONI 5 -->
-    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
-        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
-        <h3 style="margin:0;">Wina</h3>
-        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 17 Tahun</p>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>4.8</span>
+    <!-- Testi 5 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 5.0</div>
+      <p class="testi-text">Alhamdulillah, seru banget miss ,wina sangat terbantu dengan pelajaran bahasa inggris kemarin. Penjelasan dari miss Shifa mudah di pahami. Miss Shifa and miss Lila baik banget, Wina senang bisa belajar bareng Miss Shifa and miss Lila 🤗
+Makasih banyak kepada miss Shifa dan miss Lila  🥰🤗</p>
+      <div class="testi-info">
+        <img src="wina.jpg" alt="Wina">
+        <div>
+          <h4>Wina</h4>
+          <span>Siswa Online Program - 16 Tahun</span>
         </div>
       </div>
-        <p style="font-size:0.9rem; margin-top:10px;">
-          “Alhamdulillah, seru banget miss ,wina sangat terbantu dengan pelajaran bahasa inggris kemarin. Penjelasan dari miss Shifa mudah di pahami. Miss Shifa and miss Lila baik banget, Wina senang bisa belajar bareng Miss Shifa and miss Lila 🤗
-Makasih banyak kepada miss Shifa dan miss Lila  🥰🤗”
-        </p>
-      </div
+    </div>
+        
+    <!-- Testi 6 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 5.0</div>
+      <p class="testi-text">Alhamdulillah, seru banget miss ,wina sangat terbantu dengan pelajaran bahasa inggris kemarin. Penjelasan dari miss Shifa mudah di pahami. Miss Shifa and miss Lila baik banget, Wina senang bisa belajar bareng Miss Shifa and miss Lila 🤗
+Makasih banyak kepada miss Shifa dan miss Lila  🥰🤗</p>
+      <div class="testi-info">
+        <img src="wina.jpg" alt="Wina">
+        <div>
+          <h4>Wina</h4>
+          <span>Siswa Online Program - 16 Tahun</span>
+        </div>
+      </div>
+    </div>
             
-    <!-- TESTIMONI 7 -->
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <div class="testimonial-info">
-          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-avatar" alt="wina">
-          <div>
-            <div class="testimonial-name">Febi</div>
-            <div class="testimonial-role">Siswa Online Program • 17 Tahun</div>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>5.0</span>
-        </div>
-      </div>
-
-      <p class="testimonial-text">
-        “Dengan bangga, febi ingin menyampaikan apresiasi tinggi kepada miss syifa dan miss lila 
+    <!-- Testi 7 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 5.0</div>
+      <p class="testi-text">Dengan bangga, febi ingin menyampaikan apresiasi tinggi kepada miss syifa dan miss lila 
 program online class kemarin memberikan kesan yang sangat indah untuk febi dimana febi bukan cuman belajar tetapi juga tumbuh dan berkebang mengenal betapa penting nya kita belajar bahasa inggris
 terimakasih banyak kepada miss syifa dan miss lila telah memberika ilmu yang begitu bermanfaat kepada febi dan teman-teman 
-belajar bersama miss syifa dan miss lila sangat menyenangkan dan setiap materi yang di sampai kan mudah di pahami
-🤗”
-      </p>
-    </div>
-          
-    <!-- TESTIMONI 8 -->
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <div class="testimonial-info">
-          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-avatar" alt="wina">
-          <div>
-            <div class="testimonial-name">Hanifah</div>
-            <div class="testimonial-role">Siswa Online Program • 19 Tahun</div>
-          </div>
-        </div>
-        <div class="rating">
-          ⭐ <span>5.0</span>
+belajar bersama miss syifa dan miss lila sangat menyenangkan dan setiap materi yang di sampai kan mudah di pahami🤗</p>
+      <div class="testi-info">
+        <img src="febi.jpg" alt="Febi">
+        <div>
+          <h4>Febi</h4>
+          <span>Siswa Online Program - 17 Tahun</span>
         </div>
       </div>
-
-      <p class="testimonial-text">
-        “Alhamdulillah,selama belajar online bahasa inggris kemarin itu Hanifah sangat terbantu selain menambah wawasan dalam bahasa inggris cara Miss Syifa menyampaikan materi itu sangat mudah di pahami dan juga mudah di mengerti selain itu Miss Syifa selalu menambahkan seperti yel-yel semangat yang lucu sehingga gak bosan selama pembelajaran untuk Miss Syifa, Miss Lila dan rekan -rekan yang lain terimakasih telah membersamai kami dalam pembelajaran ini semoga sehat dan sukses selalu,thank you miss🥰”
-      </p>
     </div>
+            
+    <!-- Testi 8 -->
+    <div class="testi-card">
+      <div class="rating-badge">⭐ 5.0</div>
+      <p class="testi-text">Alhamdulillah,selama belajar online bahasa inggris kemarin itu Hanifah sangat terbantu selain menambah wawasan dalam bahasa inggris cara Miss Syifa menyampaikan materi itu sangat mudah di pahami dan juga mudah di mengerti selain itu Miss Syifa selalu menambahkan seperti yel-yel semangat yang lucu sehingga gak bosan selama pembelajaran untuk Miss Syifa, Miss Lila dan rekan -rekan yang lain terimakasih telah membersamai kami dalam pembelajaran ini semoga sehat dan sukses selalu,thank you miss🥰</p>
+      <div class="testi-info">
+        <img src="hanifah.jpg" alt="Hanifah">
+        <div>
+          <h4>Hanifah</h4>
+          <span>Siswa Online Program - 19 Tahun</span>
+        </div>
+      </div>
+    </div>
+
   </div>
-  
+</section>
+
 <!-- NEXT / PREV -->
     <button id="t-prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
 
