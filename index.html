@@ -176,49 +176,62 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
-     /* Instructors Slider */
-    #instructors {
-      padding: 50px 20px;
-      background-color: #eaf5f4;
-      text-align: center;
-    }
+  /* Instructors Slider Section */
+  #instructors {
+    padding:50px 20px;
+    background-color:#eaf5f4;
+    text-align:center;
+  }
 
-    .slider-container {
-      position: relative;
-      overflow: hidden;
-      max-width: 100%;
-      margin-top: 30px;
-    }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 30px;
+  }
 
-    .slider {
-      display: flex;
-      gap: 20px;
-      transition: transform 0.4s ease;
-      padding-bottom: 10px;
-    }
+  .slider {
+    display:flex;
+    gap:20px;
+    transition: transform 0.4s ease;
+    padding-bottom:10px;
+  }
 
-    .teacher-card {
-      flex: 0 0 250px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+  /* Full Image Teacher Card */
+  .teacher-card-full {
+    position: relative;
+    flex: 0 0 250px;
+    height: 350px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-    .teacher-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
+  .teacher-card-full img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: transform 0.3s;
+  }
 
-    .teacher-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
+  .teacher-card-full:hover img {
+    transform: scale(1.05);
+  }
+
+  .overlay {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:15px;
+    text-align:center;
+  }
+
+  .overlay h3 { margin:5px 0; font-size:1.1rem; }
+  .overlay p { margin:3px 0; font-size:0.8rem; }
 
     /* Slider Buttons */
     .slider-container button {
@@ -492,10 +505,6 @@
 </div> 
 </div>
 </section>
-<h2 style="text-align:center; color:#0A6F5C;">Program Kami</h2>
-<div class="card-container">
-<div class="card">
-</section>
 
 
   <!-- PRICING -->
@@ -695,50 +704,44 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
           <img src="teacher1.jpg" alt="Mr. Freddy">
           <h3>Ms. Sarah</h3>
           <p style="font-size:0.9rem; color:#777;">General English, Intensive, and TOEFL Tutor</p>
-          <p style="font-size:0.95rem; color:#333;">Mr. Freddy berpengalaman lebih dari 13 tahun mengajar bahasa Inggris</p>
         </div>
         <!-- Tutor -->
         <div class="teacher-card">
           <img src="teacher2.jpg" alt="Ms. Lila">
           <h3>Ms. Lila</h3>
           <p style="font-size:0.9rem; color:#777;">Grammar & Writing Tutor</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Lila membuat tata bahasa menjadi mudah dan menulis menjadi menyenangkan.</p>
         </div>
         <!-- Tutor -->
         <div class="teacher-card">
           <img src="teacher3.jpg" alt="Ms. Linda">
           <h3>Ms. Linda</h3>
-          <p style="font-size:0.9rem; color:#777;">Pronunciation Expert</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Linda membantu siswa menyempurnakan aksen dan pengucapan mereka.</p>
+          <p style="font-size:0.9rem; color:#777;">Pronunciation Tutor</p>
         </div>
         <!-- Tutor -->
         <div class="teacher-card">
           <img src="teacher4.jpg" alt="Ms. Shifa">
           <h3>Ms. Shifa</h3>
-          <p style="font-size:0.9rem; color:#777;">Speaking Tutor for All Program</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Shifa membantu siswa berbicara bahasa Inggris secara alami, melatih percakapan sehari-hari, dan terdengar percaya diri dalam situasi apa pun.</p>
+          <p style="font-size:0.9rem; color:#777;">Speaking Tutor</p>
         </div>
-      </div>
-         <!-- Tutor -->
+        <!-- Tutor -->
        <div class="teacher-card">
           <img src="teacher5.jpg" alt="Ms. Bibah">
           <h3>Ms. Bibah</h3>
           <p style="font-size:0.9rem; color:#777;">Grammar Tutor for Senior and Junior High School</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Bibah Mendukung siswa  dalam menguasai bahasa Inggris untuk keberhasilan akademis, ujian, dan komunikasi di kehidupan nyata.</p>
         </div>
-          <!-- Tutor -->
+        <!-- Tutor -->
        <div class="teacher-card">
           <img src="teacher6.jpg" alt="Ms. Aisna">
           <h3>Ms. Aisna</h3>
           <p style="font-size:0.9rem; color:#777;">Grammar and Listening Tutor for Elementary</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Aisna membantu siswa sekolah dasar membangun dasar yang kuat dalam tata bahasa Inggris dan keterampilan mendengarkan melalui kegiatan yang menyenangkan dan menarik.
       </div>
-          <!-- Tutor -->
+        <!-- Tutor -->
        <div class="teacher-card">
           <img src="teacher7.jpg" alt="Ms. Nadya">
           <h3>Ms. Nadya</h3>
           <p style="font-size:0.9rem; color:#777;">Beginner Tutor</p>
-          <p style="font-size:0.95rem; color:#333;">Ms. Nadya Mendukung anak-anak dalam berlatih tata bahasa dan mendengarkan melalui permainan interaktif, cerita, dan situasi bahasa Inggris di kehidupan nyata.
+      </div>
+   </div>
 
       <!-- Slider Buttons -->
       <button id="prev">&#10094;</button>
