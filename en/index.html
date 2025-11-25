@@ -57,61 +57,137 @@
       }
     }
 
-    /* HERO */
-    .hero {
-      background: url("IMG-20251120-WA0096.jpg") no-repeat center center/cover;
-      padding: 100px 20px;
-      color: white;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 10px black;
-      border-radius: 12px;
-      margin: 20px;
-    }
-
-    /* SECTIONS */
+  /* GENERAL LAYOUT */
     .section {
       padding: 40px 20px;
-      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero h2 {
+      color: #0a6f5c;
+      font-size: 2rem;
     }
 
+    /* PROGRAM CARD */
     .card-container {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      flex-wrap: wrap;
     }
-
     .card {
-      width: 300px;
+      background: white;
+      border-radius: 15px;
       padding: 20px;
-      border-radius: 12px;
-      background: #f5f5f5;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: .25s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .program-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #1dbf73, #0a6f5c);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
-    /* FLOATING BUTTON WA */
-    .float-wa {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      padding: 15px 20px;
-      border-radius: 50px;
+    /* PRICING */
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .price-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      border-top: 8px solid #1DBF73;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: .25s;
+    }
+    .price-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* GALLERY SLIDESHOW */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
       color: white;
+      border: none;
+      padding: 10px;
+      font-size: 2rem;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* FLOATING BUTTONS */
+    .float-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: #1dbf73;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+    .wa-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #003f34;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('.nav-links');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
-  </script>
 </head>
 
 <body>
