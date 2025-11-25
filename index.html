@@ -709,7 +709,7 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
       </div>
         <!-- Tutor -->
         <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher2.jpg" alt="Ms. Lila" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <img src="teacher2.png" alt="Ms. Lila" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
         <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
           <h3 style="margin:5px 0; font-size:1rem;">Ms. Lila</h3>
           <p style="margin:3px 0; font-size:0.8rem;">Grammar & Writing tutor</p>
@@ -717,7 +717,7 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
       </div>
         <!-- Tutor -->
         <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher3.jpg" alt="Ms. Linda" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <img src="teacher3.png" alt="Ms. Linda" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
         <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
           <h3 style="margin:5px 0; font-size:1rem;">Ms. Linda</h3>
           <p style="margin:3px 0; font-size:0.8rem;">Pronunciation Tutor</p>
@@ -725,7 +725,7 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
       </div>
         <!-- Tutor -->
         <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher4.jpg" alt="Ms. Shifa" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <img src="teacher4.png" alt="Ms. Shifa" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
         <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
           <h3 style="margin:5px 0; font-size:1rem;">Ms. Shifa</h3>
           <p style="margin:3px 0; font-size:0.8rem;">Speaking & Listening Tutor</p>
@@ -733,7 +733,7 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
       </div>
         <!-- Tutor -->
         <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher5.jpg" alt="Ms. Bibah" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <img src="teacher5.png" alt="Ms. Bibah" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
         <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
           <h3 style="margin:5px 0; font-size:1rem;">Ms. Bibah</h3>
           <p style="margin:3px 0; font-size:0.8rem;">Grammar Tutor for Senior& Junior High School Program</p>
@@ -793,11 +793,12 @@ slider.addEventListener('touchmove', (e)=>{
 });
 </script>
 
-  <section id="testimonials" class="testimonial-section">
-  <h2 class="testimonial-title">Apa Kata Mereka</h2>
-  <p class="testimonial-subtitle">Cerita nyata dari siswa yang belajar di Dynamic English Course Bekasi</p>
+<section id="testimonials" style="padding:50px 20px; background:#f1faf9;">
+  <h2 style="text-align:center;">What Our Students Say</h2>
 
-  <div class="testimonial-grid">
+  <div class="testimonial-slider-container" style="position:relative; overflow:hidden; max-width:100%; margin-top:30px;">
+    
+    <div class="testimonial-slider" style="display:flex; gap:20px; transition:0.4s;">
 
 <!-- TESTIMONI 1 -->
     <div class="testimonial-card">
@@ -951,6 +952,43 @@ belajar bersama miss syifa dan miss lila sangat menyenangkan dan setiap materi y
     </div>
 
   </div>
+<!-- NEXT / PREV -->
+    <button id="t-prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+
+    <button id="t-next" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+  </div>
+</section>
+
+<script>
+// Base
+const tSlider = document.querySelector('.testimonial-slider');
+const tPrev = document.getElementById('t-prev');
+const tNext = document.getElementById('t-next');
+const tScroll = 320;
+
+// Button navigation
+tNext.onclick = () => tSlider.scrollBy({ left: tScroll, behavior:"smooth" });
+tPrev.onclick = () => tSlider.scrollBy({ left: -tScroll, behavior:"smooth" });
+
+// Auto-slide
+let auto = setInterval(() => tSlider.scrollBy({ left: tScroll, behavior:"smooth" }), 4000);
+
+// Pause on hover
+tSlider.addEventListener('mouseenter', ()=> clearInterval(auto));
+tSlider.addEventListener('mouseleave', ()=> auto = setInterval(() => tSlider.scrollBy({ left: tScroll, behavior:"smooth" }), 4000));
+
+// Swipe mobile
+let startX = 0;
+tSlider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+tSlider.addEventListener("touchmove", e => {
+  let diff = startX - e.touches[0].clientX;
+  if (Math.abs(diff) > 50){
+    if(diff > 0) tSlider.scrollBy({ left: tScroll, behavior:"smooth" });
+    else tSlider.scrollBy({ left: -tScroll, behavior:"smooth" });
+    startX = e.touches[0].clientX;
+  }
+});
+</script>
 </section>
 
 
