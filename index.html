@@ -176,6 +176,159 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
+     /* Instructors Slider */
+    #instructors {
+      padding: 50px 20px;
+      background-color: #eaf5f4;
+      text-align: center;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.4s ease;
+      padding-bottom: 10px;
+    }
+
+    .teacher-card {
+      flex: 0 0 250px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .teacher-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* Slider Buttons */
+    .slider-container button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #064f44;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    #prev { left: 10px; }
+    #next { right: 10px; }
+
+    /* TESTIMONIALS */
+.testimonial-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.testimonial-title {
+  color: #064f44;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.testimonial-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffb400;
+}
+
+.rating i {
+  color: #ffb400;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
     /* FLOATING BUTTONS */
     .float-btn {
       position: fixed;
@@ -528,6 +681,161 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 <img src="IMG-20251120-WA0097.jpg" />
 <img src="WhatsApp Image 2025-11-20 at 16.56.37_59bbb3c0.jpg" />
 </div>
+</section>
+
+  <!-- Instructors Slider Section -->
+  <section id="instructors">
+    <h2>Our Instructors</h2>
+    <p>Kenali Tutor Kami yang Luar Biasa!</p>
+
+    <div class="slider-container">
+      <div class="slider">
+        <!-- Tutor -->
+        <div class="teacher-card">
+          <img src="teacher1.jpg" alt="Mr. Freddy">
+          <h3>Ms. Sarah</h3>
+          <p style="font-size:0.9rem; color:#777;">General English, Intensive, and TOEFL Tutor</p>
+          <p style="font-size:0.95rem; color:#333;">Mr. Freddy berpengalaman lebih dari 13 tahun mengajar bahasa Inggris</p>
+        </div>
+        <!-- Tutor -->
+        <div class="teacher-card">
+          <img src="teacher2.jpg" alt="Ms. Lila">
+          <h3>Ms. Lila</h3>
+          <p style="font-size:0.9rem; color:#777;">Grammar & Writing Tutor</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Lila membuat tata bahasa menjadi mudah dan menulis menjadi menyenangkan.</p>
+        </div>
+        <!-- Tutor -->
+        <div class="teacher-card">
+          <img src="teacher3.jpg" alt="Ms. Linda">
+          <h3>Ms. Linda</h3>
+          <p style="font-size:0.9rem; color:#777;">Pronunciation Expert</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Linda membantu siswa menyempurnakan aksen dan pengucapan mereka.</p>
+        </div>
+        <!-- Tutor -->
+        <div class="teacher-card">
+          <img src="teacher4.jpg" alt="Ms. Shifa">
+          <h3>Ms. Shifa</h3>
+          <p style="font-size:0.9rem; color:#777;">Speaking Tutor for All Program</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Shifa membantu siswa berbicara bahasa Inggris secara alami, melatih percakapan sehari-hari, dan terdengar percaya diri dalam situasi apa pun.</p>
+        </div>
+      </div>
+         <!-- Tutor -->
+       <div class="teacher-card">
+          <img src="teacher5.jpg" alt="Ms. Bibah">
+          <h3>Ms. Bibah</h3>
+          <p style="font-size:0.9rem; color:#777;">Grammar Tutor for Senior and Junior High School</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Bibah Mendukung siswa  dalam menguasai bahasa Inggris untuk keberhasilan akademis, ujian, dan komunikasi di kehidupan nyata.</p>
+        </div>
+          <!-- Tutor -->
+       <div class="teacher-card">
+          <img src="teacher6.jpg" alt="Ms. Aisna">
+          <h3>Ms. Aisna</h3>
+          <p style="font-size:0.9rem; color:#777;">Grammar and Listening Tutor for Elementary</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Aisna membantu siswa sekolah dasar membangun dasar yang kuat dalam tata bahasa Inggris dan keterampilan mendengarkan melalui kegiatan yang menyenangkan dan menarik.
+      </div>
+          <!-- Tutor -->
+       <div class="teacher-card">
+          <img src="teacher7.jpg" alt="Ms. Nadya">
+          <h3>Ms. Nadya</h3>
+          <p style="font-size:0.9rem; color:#777;">Beginner Tutor</p>
+          <p style="font-size:0.95rem; color:#333;">Ms. Nadya Mendukung anak-anak dalam berlatih tata bahasa dan mendengarkan melalui permainan interaktif, cerita, dan situasi bahasa Inggris di kehidupan nyata.
+
+      <!-- Slider Buttons -->
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Slider Script -->
+  <script>
+    const slider = document.querySelector('.slider');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    const scrollPerClick = 270; // Lebar card + gap
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({ left: scrollPerClick, behavior: 'smooth' });
+    });
+
+    prev.addEventListener('click', () => {
+      slider.scrollBy({ left: -scrollPerClick, behavior: 'smooth' });
+    });
+  </script>
+
+  <section id="testimonials" class="testimonial-section">
+  <h2 class="testimonial-title">Apa Kata Mereka</h2>
+  <p class="testimonial-subtitle">Cerita nyata dari siswa yang belajar di Dynamic English Course Bekasi</p>
+
+  <div class="testimonial-grid">
+
+<!-- TESTIMONI 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <img src="IMG20251121194018.jpg" class="testimonial-avatar" alt="Fatan">
+          <div>
+            <div class="testimonial-name">Fatan</div>
+            <div class="testimonial-role">Student Junior High School Program • 14 Tahun</div>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>4.8</span>
+        </div>
+      </div>
+
+      <p class="testimonial-text">
+        “Memberikan kosa kata yang real life dan dapat lebih dimengerti, suasananya lebih nyaman di Les daripada di kelas.”
+      </p>
+    </div>
+
+    <!-- TESTIMONI 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <img src="https://i.pravatar.cc/150?img=47" class="testimonial-avatar" alt="Dareen">
+          <div>
+            <div class="testimonial-name">Dareen</div>
+            <div class="testimonial-role">Student SMPIT Darul Mazaa • 13 Tahun</div>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>5.0</span>
+        </div>
+      </div>
+
+      <p class="testimonial-text">
+        Hello Miss Lila, I just wanna say thank you for being such an amazing teacher. You made learning English way more
+        fun than I ever expected, especially with all the games and activities you brought into class. You always knew
+        how to make everyone enjoy learning while still actually learning something real.
+        <br><br>
+        I'm going to miss your classes, the laughs, the energy, and just how chill and kind you always were. Thank you
+        for everything you've done for us. You really made a big impact, and I'll never forget it.
+      </p>
+    </div>
+
+    <!-- TESTIMONI 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-avatar" alt="Nabila">
+          <div>
+            <div class="testimonial-name">Nabila</div>
+            <div class="testimonial-role">Mahasiswi • 19 Tahun</div>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>4.9</span>
+        </div>
+      </div>
+
+      <p class="testimonial-text">
+        “Belajar di Dynamic English Course itu seru dan bikin nyaman. Tutornya jelas waktu menjelaskan, jadi materi sulit
+        pun terasa lebih mudah dipahami. Speaking aku jadi lebih percaya diri. Tempat kursus yang benar-benar ngasih hasil!”
+      </p>
+    </div>
+
+  </div>
 </section>
 
 
