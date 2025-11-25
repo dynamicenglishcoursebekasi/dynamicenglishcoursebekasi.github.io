@@ -143,39 +143,172 @@
       transform: translateY(-10px);
     }
 
-    /* GALLERY SLIDESHOW */
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .carousel-img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-    .carousel-btn {
+  /* Instructors Slider Section */
+  #instructors {
+    padding:50px 20px;
+    background-color:#eaf5f4;
+    text-align:center;
+  }
+
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .slider {
+    display:flex;
+    gap:20px;
+    transition: transform 0.4s ease;
+    padding-bottom:10px;
+  }
+
+  /* Full Image Teacher Card */
+  .teacher-card-full {
+    position: relative;
+    flex: 0 0 250px;
+    height: 350px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .teacher-card-full img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: transform 0.3s;
+  }
+
+  .teacher-card-full:hover img {
+    transform: scale(1.05);
+  }
+
+  .overlay {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:15px;
+    text-align:center;
+  }
+
+  .overlay h3 { margin:5px 0; font-size:1.1rem; }
+  .overlay p { margin:3px 0; font-size:0.8rem; }
+
+    /* Slider Buttons */
+    .slider-container button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.4);
+      background: #064f44;
       color: white;
       border: none;
-      padding: 10px;
-      font-size: 2rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
-      border-radius: 8px;
+      font-size: 18px;
     }
-    .prev { left: 10px; }
-    .next { right: 10px; }
 
+    #prev { left: 10px; }
+    #next { right: 10px; }
+
+    /* TESTIMONIALS */
+.testimonial-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.testimonial-title {
+  color: #064f44;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.testimonial-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffb400;
+}
+
+.rating i {
+  color: #ffb400;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
     /* FLOATING BUTTONS */
     .float-btn {
       position: fixed;
@@ -339,7 +472,6 @@
 </div> 
 </div>
 </section>
-<h2 style="text-align:center; color:#0A6F5C;">Our Program</h2>
 <div class="card-container">
 <div class="card">
 </section>
@@ -528,6 +660,286 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 <img src="IMG-20251120-WA0097.jpg" />
 <img src="WhatsApp Image 2025-11-20 at 16.56.37_59bbb3c0.jpg" />
 </div>
+</section>
+  
+  <!-- Instructors Slider Section -->
+  <section id="instructors" style="padding:50px 20px; background-color:#eaf5f4; text-align:center;">
+  <h2>Our Tutors</h2>
+  <p>Meet Our Amazing Tutors</p>
+
+    <div class="slider-container">
+      <div class="slider">
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher1.jpg" alt="Mr. Freddy" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Mr. Freddy</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">GEP, Intensive, dan TOEFL Tutor</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher2.jpg" alt="Ms. Lila" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Lila</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Grammar & Writing tutor</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher3.jpg" alt="Ms. Linda" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Linda</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Pronunciation Tutor</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher4.jpg" alt="Ms. Shifa" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Shifa</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Speaking & Listening Tutor</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher5.jpg" alt="Ms. Bibah" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Bibah</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Grammar Tutor for Senior& Junior High School Program</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher6.jpg" alt="Ms. Aisna" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Aisna</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Grammar Tutor for Elementary Program</p>
+        </div>
+      </div>
+        <!-- Tutor -->
+        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
+        <img src="teacher7.jpg" alt="Ms. Nadya" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
+        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
+          <h3 style="margin:5px 0; font-size:1rem;">Ms. Nadya</h3>
+          <p style="margin:3px 0; font-size:0.8rem;">Beginner Program Tutor</p>
+        </div>
+      </div>
+
+      <!-- Slider Buttons -->
+    <button id="prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+    <button id="next" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+  </div>
+</section>
+
+<script>
+const slider = document.querySelector('.slider');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const scrollPerClick = 270;
+
+// Button navigation
+next.addEventListener('click', ()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); });
+prev.addEventListener('click', ()=>{ slider.scrollBy({ left: -scrollPerClick, behavior:'smooth' }); });
+
+// Auto-slide every 4 seconds
+let autoSlide = setInterval(()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }, 4000);
+
+// Pause auto-slide on hover
+slider.addEventListener('mouseenter', ()=>{ clearInterval(autoSlide); });
+slider.addEventListener('mouseleave', ()=>{ autoSlide = setInterval(()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }, 4000); });
+
+// Touch swipe for mobile
+let startX = 0;
+slider.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; });
+slider.addEventListener('touchmove', (e)=>{
+  let touchEndX = e.touches[0].clientX;
+  let diff = startX - touchEndX;
+  if(Math.abs(diff) > 50){
+    if(diff > 0){ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }
+    else { slider.scrollBy({ left: -scrollPerClick, behavior:'smooth' }); }
+    startX = touchEndX;
+  }
+});
+</script>
+
+<section id="testimonials" style="padding:50px 20px; background:#f1faf9;">
+  <h2 style="text-align:center;">What Our Students Say</h2>
+
+  <div class="testimonial-slider-container" style="position:relative; overflow:hidden; max-width:100%; margin-top:30px;">
+    
+    <div class="testimonial-slider" style="display:flex; gap:20px; transition:0.4s;">
+
+<!-- TESTIMONI 1 -->
+<div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
+        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
+        <h3 style="margin:0;">Fatan</h3>
+        <p style="font-size:0.85rem; color:#555;">Student Junior High School / 14 Tahun</p>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>5.0</span>
+        </div>
+      </div>
+        <p style="font-size:0.9rem; margin-top:10px;">
+          “It provides real-life vocabulary that's easier to understand. The atmosphere is also more comfortable in a tutoring setting than in a classroom.”
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TESTIMONI 2 -->
+  <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
+        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
+        <h3 style="margin:0;">Dareen</h3>
+        <p style="font-size:0.85rem; color:#555;">Student SMPIT Darul Mazaa / 14 Tahun</p>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>5.0</span>
+        </div>
+      </div>
+        <p style="font-size:0.9rem; margin-top:10px;">
+          “Hello Miss Lila, I just wanna say thank you for being such an amazing teacher. You made learning English way more
+        fun than I ever expected, especially with all the games and activities you brought into class. You always knew
+        how to make everyone enjoy learning while still actually learning something real.
+        <br><br>
+        I'm going to miss your classes, the laughs, the energy, and just how chill and kind you always were. Thank you
+        for everything you've done for us. You really made a big impact, and I'll never forget it.”
+        </p>
+      </div>
+
+    <!-- TESTIMONI 3 -->
+    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
+        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
+        <h3 style="margin:0;">Zahra</h3>
+        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 15 Tahun</p>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>4.9</span>
+        </div>
+      </div>
+        <p style="font-size:0.9rem; margin-top:10px;">
+          “Alhamdulillah Zahra was helped by late's online English class. Miss's easy-to-understand explanations made learning English a breeze. Thank you, Miss, and the team of Kampung Inggris. 😍”
+        </p>
+      </div>
+
+    <!-- TESTIMONI 4 -->
+    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
+        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
+        <h3 style="margin:0;">Rizma</h3>
+        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 15 Tahun</p>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>4.9</span>
+        </div>
+      </div>
+        <p style="font-size:0.9rem; margin-top:10px;">
+          “Alhamdulillah,so masyaallah fun, Then the explanation was quickly understood, and Miss Syifa and Miss Lila were also very kind, and the lessons were also very good, Rizma was very happy to have studied with great people like Miss Syifa and Miss Lila, we will always miss Miss Syifa and Miss Lila, Rizma was also very helped by our online class program🫶 Thank you very much to Miss and everyone🥰🤗”
+        </p>
+      </div>
+    
+    <!-- TESTIMONI 5 -->
+    <div class="testimonial-card" style="width:300px; min-height:260px; background:white; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.08); position:relative;">
+        <img src="IMG20251121194018.jpg" style="width:70px; height:70px; object-fit:cover; border-radius:50%; margin-bottom:10px;">
+        <h3 style="margin:0;">Wina</h3>
+        <p style="font-size:0.85rem; color:#555;">Siswa Online Program / 17 Tahun</p>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>4.8</span>
+        </div>
+      </div>
+        <p style="font-size:0.9rem; margin-top:10px;">
+          “Alhamdulillah, It was really fun, Miss. Wina really enjoyed yesterday's English lesson. Miss Shifa's explanation was easy to understand. Miss Shifa and Miss Lila were very kind. Wina was happy to be able to study with Miss Shifa and Miss Lila 🤗
+Thank you very much to Miss Shifa and Miss Lila.  🥰🤗”
+        </p>
+      </div
+            
+    <!-- TESTIMONI 7 -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-avatar" alt="wina">
+          <div>
+            <div class="testimonial-name">Febi</div>
+            <div class="testimonial-role">Siswa Online Program • 17 Tahun</div>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>5.0</span>
+        </div>
+      </div>
+
+      <p class="testimonial-text">
+        “Febi proudly expresses appreciation to Miss Syifa and Miss Lila.
+The online class program lately left a wonderful impression on Febi. She not only learned but also grew and developed, recognizing the importance of learning English.
+Thank you very much to Miss Syifa and Miss Lila for imparting such valuable knowledge to Febi and friends.
+Learning with Miss Syifa and Miss Lila was very enjoyable, and all the material presented was easy to understand.
+🤗”
+      </p>
+    </div>
+          
+    <!-- TESTIMONI 8 -->
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <div class="testimonial-info">
+          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-avatar" alt="wina">
+          <div>
+            <div class="testimonial-name">Hanifah</div>
+            <div class="testimonial-role">Siswa Online Program • 19 Tahun</div>
+          </div>
+        </div>
+        <div class="rating">
+          ⭐ <span>5.0</span>
+        </div>
+      </div>
+
+      <p class="testimonial-text">
+        “Alhamdulillah, during the online English learning yesterday, Hanifah was very helped, besides increasing her knowledge in English, Miss Syifa's way of delivering the material was very easy to understand and also easy to understand, besides that Miss Syifa always added funny, enthusiastic cheers so that she didn't get bored during the learning for Miss Syifa, Miss Lila and other colleagues, thank you for accompanying us in this learning, hopefully you will always be healthy and successful, thank you miss🥰”
+      </p>
+    </div>
+  </div>
+  
+<!-- NEXT / PREV -->
+    <button id="t-prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
+
+    <button id="t-next" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+  </div>
+</section>
+
+<script>
+// Base
+const tSlider = document.querySelector('.testimonial-slider');
+const tPrev = document.getElementById('t-prev');
+const tNext = document.getElementById('t-next');
+const tScroll = 320;
+
+// Button navigation
+tNext.onclick = () => tSlider.scrollBy({ left: tScroll, behavior:"smooth" });
+tPrev.onclick = () => tSlider.scrollBy({ left: -tScroll, behavior:"smooth" });
+
+// Auto-slide
+let auto = setInterval(() => tSlider.scrollBy({ left: tScroll, behavior:"smooth" }), 4000);
+
+// Pause on hover
+tSlider.addEventListener('mouseenter', ()=> clearInterval(auto));
+tSlider.addEventListener('mouseleave', ()=> auto = setInterval(() => tSlider.scrollBy({ left: tScroll, behavior:"smooth" }), 4000));
+
+// Swipe mobile
+let startX = 0;
+tSlider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+tSlider.addEventListener("touchmove", e => {
+  let diff = startX - e.touches[0].clientX;
+  if (Math.abs(diff) > 50){
+    if(diff > 0) tSlider.scrollBy({ left: tScroll, behavior:"smooth" });
+    else tSlider.scrollBy({ left: -tScroll, behavior:"smooth" });
+    startX = e.touches[0].clientX;
+  }
+});
+</script>
 </section>
 
 
