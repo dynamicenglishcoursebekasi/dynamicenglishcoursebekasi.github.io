@@ -197,59 +197,108 @@
     padding-bottom:10px;
   }
 
-  /* Full Image Teacher Card */
-  .teacher-card-full {
-    position: relative;
-    flex: 0 0 250px;
-    height: 350px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    cursor:pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* ---------------------------
+   TUTOR SLIDER - FINAL CLEAN VERSION
+---------------------------- */
+#instructors {
+  padding: 50px 20px;
+  background: #eaf5f4;
+  text-align: center;
+}
+
+.tutor-slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.tutor-slider {
+  display: flex;
+  gap: 18px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding: 10px 5px 20px;
+  scroll-behavior: smooth;
+}
+
+.tutor-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.tutor-slider::-webkit-scrollbar-thumb {
+  background: #1dbf73;
+  border-radius: 10px;
+}
+
+.tutor-card {
+  flex: 0 0 230px;
+  height: 330px;
+  border-radius: 15px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: white;
+  transition: transform .3s ease;
+}
+
+.tutor-card:hover {
+  transform: scale(1.03);
+}
+
+.tutor-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tutor-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  text-align: center;
+}
+
+.tutor-overlay h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.tutor-overlay p {
+  margin: 4px 0 0;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.tutor-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #064f44;
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#tutor-prev { left: 10px; }
+#tutor-next { right: 10px; }
+
+/* Mobile */
+@media (max-width: 480px) {
+  .tutor-card {
+    flex: 0 0 180px;
+    height: 260px;
   }
-
-  .teacher-card-full img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition: transform 0.3s;
-  }
-
-  .teacher-card-full:hover img {
-    transform: scale(1.05);
-  }
-
-  .overlay {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    background:rgba(0,0,0,0.6);
-    color:white;
-    padding:15px;
-    text-align:center;
-  }
-
-  .overlay h3 { margin:5px 0; font-size:1.1rem; }
-  .overlay p { margin:3px 0; font-size:0.8rem; }
-
-    /* Slider Buttons */
-    .slider-container button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #064f44;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    #prev { left: 10px; }
-    #next { right: 10px; }
+}
 
 <style>
 #testimonials {
@@ -657,106 +706,104 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 </div>
 </section>
 
-  <!-- Instructors Slider Section -->
-  <section id="instructors" style="padding:50px 20px; background-color:#eaf5f4; text-align:center;">
+<!-- =========================
+       TUTOR SECTION - FIXED
+========================= -->
+<section id="instructors">
   <h2>Tutor Kami</h2>
-  <p>Kenali Tutor Tutor Luar Biasa!</p>
+  <p>Kenali tutor-tutor luar biasa kami!</p>
 
-    <div class="slider-container">
-      <div class="slider">
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher1.jpg" alt="Mr. Freddy" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Mr. Freddy</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">GEP, Intensive, dan TOEFL Tutor</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher2.jpg" alt="Ms. Lila" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Lila</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Grammar & Writing tutor</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher3.jpg" alt="Ms. Linda" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Linda</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Pronunciation Tutor</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher4.jpg" alt="Ms. Shifa" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Shifa</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Speaking & Listening Tutor</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher5.jpg" alt="Ms. Bibah" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Bibah</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Grammar Tutor for Senior& Junior High School Program</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher6.jpg" alt="Ms. Aisna" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Aisna</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Grammar Tutor for Elementary Program</p>
-        </div>
-      </div>
-        <!-- Tutor -->
-        <div class="teacher-card" style="position:relative; width:250px; height:350px; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="teacher7.jpg" alt="Ms. Nadya" style="width:100%; height:100%; object-fit:cover; transition: transform 0.3s;">
-        <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.6); color:white; padding:10px; text-align:center;">
-          <h3 style="margin:5px 0; font-size:1rem;">Ms. Nadya</h3>
-          <p style="margin:3px 0; font-size:0.8rem;">Beginner Program Tutor</p>
+  <div class="tutor-slider-container">
+
+    <button id="tutor-prev" class="tutor-btn">&#10094;</button>
+
+    <div class="tutor-slider">
+
+      <div class="tutor-card">
+        <img src="teacher1.jpg" alt="Mr. Freddy">
+        <div class="tutor-overlay">
+          <h3>Mr. Freddy</h3>
+          <p>GEP, Intensive & TOEFL Tutor</p>
         </div>
       </div>
 
-      <!-- Slider Buttons -->
-    <button id="prev" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10094;</button>
-    <button id="next" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#064f44; color:white; border:none; border-radius:50%; width:40px; height:40px; cursor:pointer;">&#10095;</button>
+      <div class="tutor-card">
+        <img src="teacher2.jpg" alt="Ms. Lila">
+        <div class="tutor-overlay">
+          <h3>Ms. Lila</h3>
+          <p>Grammar & Writing Tutor</p>
+        </div>
+      </div>
+
+      <div class="tutor-card">
+        <img src="teacher3.jpg" alt="Ms. Linda">
+        <div class="tutor-overlay">
+          <h3>Ms. Linda</h3>
+          <p>Pronunciation Tutor</p>
+        </div>
+      </div>
+
+      <div class="tutor-card">
+        <img src="teacher4.jpg" alt="Ms. Shifa">
+        <div class="tutor-overlay">
+          <h3>Ms. Shifa</h3>
+          <p>Speaking & Listening Tutor</p>
+        </div>
+      </div>
+
+      <div class="tutor-card">
+        <img src="teacher5.jpg" alt="Ms. Bibah">
+        <div class="tutor-overlay">
+          <h3>Ms. Bibah</h3>
+          <p>Grammar Tutor (SMP & SMA)</p>
+        </div>
+      </div>
+
+      <div class="tutor-card">
+        <img src="teacher6.jpg" alt="Ms. Aisna">
+        <div class="tutor-overlay">
+          <h3>Ms. Aisna</h3>
+          <p>Elementary Tutor</p>
+        </div>
+      </div>
+
+      <div class="tutor-card">
+        <img src="teacher7.jpg" alt="Ms. Nadya">
+        <div class="tutor-overlay">
+          <h3>Ms. Nadya</h3>
+          <p>Beginner Program Tutor</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="tutor-next" class="tutor-btn">&#10095;</button>
+
   </div>
 </section>
 
+
 <script>
-const slider = document.querySelector('.slider');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-const scrollPerClick = 270;
+const tutorSlider = document.querySelector('.tutor-slider');
+const btnPrev = document.getElementById('tutor-prev');
+const btnNext = document.getElementById('tutor-next');
+const scrollAmount = 260;
 
-// Button navigation
-next.addEventListener('click', ()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); });
-prev.addEventListener('click', ()=>{ slider.scrollBy({ left: -scrollPerClick, behavior:'smooth' }); });
+btnNext.onclick = () => tutorSlider.scrollBy({ left: scrollAmount, behavior:"smooth" });
+btnPrev.onclick = () => tutorSlider.scrollBy({ left: -scrollAmount, behavior:"smooth" });
 
-// Auto-slide every 4 seconds
-let autoSlide = setInterval(()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }, 4000);
-
-// Pause auto-slide on hover
-slider.addEventListener('mouseenter', ()=>{ clearInterval(autoSlide); });
-slider.addEventListener('mouseleave', ()=>{ autoSlide = setInterval(()=>{ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }, 4000); });
-
-// Touch swipe for mobile
+// Swipe gesture
 let startX = 0;
-slider.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; });
-slider.addEventListener('touchmove', (e)=>{
-  let touchEndX = e.touches[0].clientX;
-  let diff = startX - touchEndX;
-  if(Math.abs(diff) > 50){
-    if(diff > 0){ slider.scrollBy({ left: scrollPerClick, behavior:'smooth' }); }
-    else { slider.scrollBy({ left: -scrollPerClick, behavior:'smooth' }); }
-    startX = touchEndX;
+tutorSlider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+tutorSlider.addEventListener("touchmove", e => {
+  const diff = startX - e.touches[0].clientX;
+  if(Math.abs(diff) > 60){
+    tutorSlider.scrollBy({ left: diff > 0 ? scrollAmount : -scrollAmount, behavior:"smooth" });
+    startX = e.touches[0].clientX;
   }
 });
 </script>
+
 
 <section <!-- Testimonial Section -->
 <section id="testimonials" style="padding:50px 0; background-color:#f5f5f5;">
